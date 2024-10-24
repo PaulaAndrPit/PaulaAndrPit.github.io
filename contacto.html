@@ -32,16 +32,29 @@
                 <label for="codigo-postal"> Código Postal: </label><br><br>
                 <input type="text" id="codigo-postal" name="codigo-postal" pattern="[A-Z]{1}[0-9]{4}[A-Z]{3}"><br><br><br>
 
-                <h2>Elige el método que prefieras para comunicarnos: </h2><br>
-                <p>
-                 <input type="checkbox" id="email" name="email" value="E-MAIL" checked>
-                 <label for="email">E-MAIL</label>
-                 <input type="checkbox" id="telefono" name="telefono" value="TELEFONO">
-                 <label for="telefono"> Teléfono</label>
-                 <input type="checkbox" id="correopostal" name="correopostal" value="CorreoPostal" >
-                 <label for="CorreoPostal">Correo Postal </label><br>
+                <h2>Elige el método que prefieras para comunicarnos: 
+                <p >
+                    <input type="checkbox" id="email" name="email" value="E-MAIL" checked>
+                    <label for="email">E-MAIL</label>
+                    <input type="checkbox" id="telefono" name="telefono" value="TELEFONO">
+                    <label for="telefono"> Teléfono</label>
+                    <input type="checkbox" id="correopostal" name="correopostal" value="CorreoPostal" >
+                    <label for="CorreoPostal">Correo Postal </label><br>
                 </p>
-  
+            </h2><br>
+           
+                    <h2>Tipo de suscripción: 
+                        <p>
+                            <input type="checkbox" id="tipo" name="alertas" value="Alertas" checked>
+                            <label for="alertas">Alertas</label>
+                            <input type="checkbox" id="promociones" name="promociones" value="Promociones">
+                            <label for="promociones">Promociones</label>
+                            <input type="checkbox" id="noticias" name="noticias" value="Noticias">
+                            <label for="noticias">Noticias</label>
+                            <input type="checkbox" id="eventos" name="promociones" value="Eventos">
+                            <label for="eventos">Eventos</label>
+                        </p>
+                    </h2><br>
             <button type="button" onclick="alert('Su formulario fue enviado con éxito')" >Enviar</button>
         </p>
         </form>
