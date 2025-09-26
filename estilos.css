@@ -9,42 +9,44 @@ header {
     font-size: 42px;
     text-align: left;
     margin-bottom: 20px;
-    color: rgb(153, 0, 255);
+    color:rgb(26, 255, 201);
     padding: 20px;
-    background-color: hsla(327, 74%, 70%, 0.3);
-  
+ 
 }
+
 h1 {
     font-size: 42px;
     text-align: left;
     margin-bottom: 20px;
     color: rgb(153, 0, 255);
     padding: 20px;
-   
     border: 5px solid rgb(134, 38, 197);
 
 }
 
-h2 {
-   
+.hover-giro {
+    position: right;
+    width: 200px;
+    border-radius: 50%;
+    transition: transform 0.5s;
+  }
+  .hover-giro:hover {
+    transform: rotateY(360deg);
+}
+
+h2 {   
     font-weight: bold; 
     color: rgb(255, 0, 191);
-    font-size: 30px;
+    font-size: 40px;
     padding: 20px;
     border: 4px solid rgb(153, 0, 255);
-
-    
-}    
-h3 {
-    font-size: 24px;
-    color: black;
-
 }
 
 body {
     padding: 1em;
     background-color: #f0f0f0;
 }
+
 nav{
  
     background-position: right bottom, left top;
@@ -54,6 +56,7 @@ nav{
     font-family: Verdana, Geneva, Tahoma, sans-serif;
    
 }
+
 p{
     font-size: 36px;
     color: black;
@@ -67,13 +70,14 @@ footer {
     font-size: 14px;
     text-align: center;
     margin-bottom: 20px;
-    color: blueviolet;
+}
 
+span {
+  font-size:40px;
 }
 
 a {
     font-weight: bold; 
-   
     text-decoration: underline;
 }
 
@@ -82,12 +86,13 @@ table, th, td {
   }
 
 button[type=button]{
-    font-size: 32px;
+    font-size: 40px;
     border-style: solid;
     border-color: #000000;
-    background-color: rgb(163, 28, 253);
+    background-color: rgb(153, 0, 255);
   }
-  input[type=text], select {
+
+input[type=text], select {
 
     width: 100%;
     padding: 12px 20px;
@@ -97,7 +102,7 @@ button[type=button]{
     border-radius: 4px;
     box-sizing: border-box;
   }
-  input[type=number], select {
+input[type=number], select {
 
     width: 100%;
     padding: 12px 20px;
@@ -107,7 +112,7 @@ button[type=button]{
     border-radius: 4px;
     box-sizing: border-box;
   }
-  input[list=provincias] {
+input[list=provincias] {
 
     width: 100%;
     padding: 12px 20px;
@@ -117,17 +122,25 @@ button[type=button]{
     border-radius: 4px;
     box-sizing: border-box;
   }
-  
-  button[type=button] {
+
+button[type=button] {
     width: 100%;
-    background-color: hsl(310, 39%, 49%);
+    background-color: rgb(153, 0, 255);
     color: white;
     padding: 14px 20px;
     margin: 8px 0;
     border: none;
     border-radius: 4px;
     cursor: pointer;
-  }
-  
+}
+
+.foto {
+  width:500px;
+  height:800px;
+}
+
+.pie {
+  border-radius: 50%;
+}  
   
  
