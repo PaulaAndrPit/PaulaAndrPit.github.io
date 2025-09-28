@@ -3,24 +3,24 @@
     <link rel="stylesheet" href="estilos.css">
 <body>
     <main>
-        <form id="p1">
-            <h1> COMPLETE EL FORMULARIO </h1><br>
+        <form>
+            <h1> COMPLETE EL FORMULARIO </h1>
             <p>
                 <label for="nombre">Nombre: </label><br>
-                <input type="text" id="nombre" name="nombre" maxlength="20"><br><br>
+                <input type="text" id="nombre" name="nombre" maxlength="20"><br>
                 <label for="apellido">Apellido: </label><br>
-                <input type="text" id="apellido" name="apellido" maxlength="20"><br><br>
+                <input type="text" id="apellido" name="apellido" maxlength="20"><br>
                 <label for="direccion">Dirección: </label><br>
-                <input type="text" id="direccion" name="direccion" ><br><br>
+                <input type="text" id="direccion" name="direccion" ><br>
                 <label for="text">E-mail: </label><br>
-                <input type="text" id="Email" name="Email"><br><br>
+                <input type="text" id="Email" name="Email"><br>
                 <label type="Telefono">Teléfono: <br>
                 <input type="text" id="telefono" name="telefono" pattern ="[0-9]{13}" onclick=this.value="" ></label><br>  <br>           
                 <label for="edad">Edad: </label><br>
-                <input type="number" id="edad" name="edad" min="16" max="120"><br><br>
+                <input type="number" id="edad" name="edad" min="16" max="120"><br>
             
                 <label for="provincia">Provincia: </label><br>
-                <input list="provincias" name="provincia" id="provincia"><br><br>
+                <input list="provincias" name="provincia" id="provincia"><br>
                 <datalist id="provincias">
                     <option value="Rio Negro">Rio Negro</option>
                     <option value="Neuquén">Neuquén</option>
@@ -29,22 +29,22 @@
                     <option value="Tierra del Fuego">Tierra del Fuego</option>
                 </datalist>
             
-                <label for="codigo-postal"> Código Postal: </label><br><br>
-                <input type="text" id="codigo-postal" name="codigo-postal" pattern="[A-Z]{1}[0-9]{4}[A-Z]{3}"><br><br><br>
+                <label for="codigo-postal"> Código Postal: </label><br>
+                <!--- Código postal: controlado con una expresión regular que incluya A1234ABC-->
+                <input type="text" id="codigo-postal" name="codigo-postal" pattern="[A-Z]{1}[0-9]{4}[A-Z]{3}"><br>
 
                 <h2>Elige el método que prefieras para comunicarnos: 
-                <p >
-                    <input type="checkbox" id="email" name="email" value="E-MAIL" checked>
+                <p class="Suscripcion">
+                    <input type="radio" id="email" name="option" value="E-MAIL" checked>
                     <label for="email">E-MAIL</label>
-                    <input type="checkbox" id="telefono" name="telefono" value="TELEFONO">
+                    <input type="radio" id="telefono" name="option" value="TELEFONO">
                     <label for="telefono"> Teléfono</label>
-                    <input type="checkbox" id="correopostal" name="correopostal" value="CorreoPostal" >
+                    <input type="radio" id="correopostal" name="option" value="CorreoPostal" >
                     <label for="CorreoPostal">Correo Postal </label><br>
                 </p>
-            </h2><br>
-           
-                    <h2>Tipo de suscripción: 
-                        <p>
+                </h2><br>
+                <h2>Tipo de suscripción:                     
+                        <p class="Suscripcion">
                             <input type="checkbox" id="tipo" name="alertas" value="Alertas" checked>
                             <label for="alertas">Alertas</label>
                             <input type="checkbox" id="promociones" name="promociones" value="Promociones">
@@ -54,12 +54,12 @@
                             <input type="checkbox" id="eventos" name="promociones" value="Eventos">
                             <label for="eventos">Eventos</label>
                         </p>
-                    </h2><br>
-            <button type="button" onclick="alert('Su formulario fue enviado con éxito')" >Enviar</button>
-        </p>
+                </h2><br>
+                <button type="button" onclick="alert('Su formulario fue enviado con éxito')" >Enviar</button>
+            </p>
         </form>
     </main>
-        <br>
+    
     <table>
         <tr>
         <th>Formulario</th>
@@ -89,7 +89,7 @@
 </body>
 <footer>
     <p style="text-align:center;">
-        <a href="/index.html">Volver a página principal</a>
+        <a href="index.html">Volver a página principal</a>
     </p>
 </footer>
 

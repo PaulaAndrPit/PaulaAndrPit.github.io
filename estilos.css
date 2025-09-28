@@ -9,7 +9,8 @@ header {
     font-size: 42px;
     text-align: left;
     margin-bottom: 20px;
-    color:rgb(26, 255, 201);
+    color: rgb(77, 4, 77);
+    background-color:rgba(176, 0, 164, 0.3);
     padding: 20px;
  
 }
@@ -18,28 +19,28 @@ h1 {
     font-size: 42px;
     text-align: left;
     margin-bottom: 20px;
-    color: rgb(153, 0, 255);
+    color: rgb(77, 4, 77);
     padding: 20px;
-    border: 5px solid rgb(134, 38, 197);
-
 }
 
 .hover-giro {
-    position: right;
+    
     width: 200px;
     border-radius: 50%;
     transition: transform 0.5s;
   }
   .hover-giro:hover {
+
     transform: rotateY(360deg);
 }
 
 h2 {   
     font-weight: bold; 
-    color: rgb(255, 0, 191);
+    color: rgb(77, 4, 77);
     font-size: 40px;
     padding: 20px;
-    border: 4px solid rgb(153, 0, 255);
+    background-color:rgba(176, 0, 164, 0.3);
+    border: 4px solid rgba(104, 2, 172, 0.61);
 }
 
 body {
@@ -60,7 +61,6 @@ nav{
 p{
     font-size: 36px;
     color: black;
-    padding: auto;
     margin-bottom: 10px;
  
 }
@@ -81,10 +81,6 @@ a {
     text-decoration: underline;
 }
 
-table, th, td {    
-    border: 1px solid black;
-  }
-
 button[type=button]{
     font-size: 40px;
     border-style: solid;
@@ -95,6 +91,7 @@ button[type=button]{
 input[type=text], select {
 
     width: 100%;
+    font-size: 32px;
     padding: 12px 20px;
     margin: 8px 0;
     display: inline-block;
@@ -105,6 +102,7 @@ input[type=text], select {
 input[type=number], select {
 
     width: 100%;
+    font-size: 32px;
     padding: 12px 20px;
     margin: 8px 0;
     display: inline-block;
@@ -115,11 +113,12 @@ input[type=number], select {
 input[list=provincias] {
 
     width: 100%;
+    font-size: 32px;
     padding: 12px 20px;
     margin: 8px 0;
     display: inline-block;
     border: 1px solid #ccc;
-    border-radius: 4px;
+    border-radius: 8px;
     box-sizing: border-box;
   }
 
@@ -133,7 +132,12 @@ button[type=button] {
     border-radius: 4px;
     cursor: pointer;
 }
-
+p.Suscripcion{
+  appearance: none;
+}
+table, th, td {    
+    border: 1px solid black;
+  }
 .foto {
   width:500px;
   height:800px;
