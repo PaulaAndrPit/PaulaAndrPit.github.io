@@ -15,7 +15,7 @@
                 <label for="text">E-mail: </label><br>
                 <input type="text" id="Email" name="Email"><br>
                 <label type="Telefono">Teléfono: <br>
-                <input type="text" id="telefono" name="telefono" pattern ="[0-9]{13}" onclick=this.value="" ></label><br>  <br>           
+                <input type="text" id="telefono" name="telefono" placeholder="02920-15123456" pattern ="[0-9]{5}-[0-9]{8}" onclick=this.value="" ></label><br>  <br>           
                 <label for="edad">Edad: </label><br>
                 <input type="number" id="edad" name="edad" min="16" max="120"><br>
             
@@ -31,7 +31,7 @@
             
                 <label for="codigo-postal"> Código Postal: </label><br>
                 <!--- Código postal: controlado con una expresión regular que incluya A1234ABC-->
-                <input type="text" id="codigo-postal" name="codigo-postal" pattern="[A-Z]{1}[0-9]{4}[A-Z]{3}"><br>
+                <input type="text" id="codigo-postal" name="codigo-postal" placeholder="A1234ABC" pattern="[A-Z]{1}[0-9]{4}[A-Z]{3}"><br>
 
                 <h2>Elige el método que prefieras para comunicarnos: 
                 <p class="Suscripcion">
