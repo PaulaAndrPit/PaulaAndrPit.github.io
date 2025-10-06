@@ -6,21 +6,21 @@
         <form>
             <h1> COMPLETE EL FORMULARIO </h1>
             <p>
-                <label for="nombre">Nombre: </label><br>
-                <input type="text" id="nombre" name="nombre" maxlength="20"><br>
-                <label for="apellido">Apellido: </label><br>
-                <input type="text" id="apellido" name="apellido" maxlength="20"><br>
-                <label for="direccion">Dirección: </label><br>
-                <input type="text" id="direccion" name="direccion" ><br>
-                <label for="text">E-mail: </label><br>
-                <input type="text" id="Email" name="Email"><br>
-                <label type="Telefono">Teléfono: <br>
-                <input type="text" id="telefono" name="telefono" placeholder="02920-15123456" pattern ="[0-9]{5}-[0-9]{8}" onclick=this.value="" ></label><br>  <br>           
-                <label for="edad">Edad: </label><br>
-                <input type="number" id="edad" name="edad" min="16" max="120"><br>
-            
-                <label for="provincia">Provincia: </label><br>
-                <input list="provincias" name="provincia" id="provincia"><br>
+                <label for="nombre">Nombre: </label>
+                <input type="text" id="nombre" name="nombre" maxlength="20">
+                <label for="apellido">Apellido: </label>
+                <input type="text" id="apellido" name="apellido" maxlength="20">
+                <label for="direccion">Dirección: </label>
+                <input type="text" id="direccion" name="direccion" >
+                <label for="text">E-mail: </label>
+                <input type="text" id="Email" name="Email">
+                <label type="Telefono">Teléfono: 
+                <input type="text" id="telefono" name="telefono" placeholder="02920-15123456" pattern ="[0-9]{5}-[0-9]{8}" onclick=this.value="" >
+                </label>      
+                <label for="edad">Edad: </label>
+                <input type="number" id="edad" name="edad" min="16" max="120">
+                <label for="provincia">Provincia: </label>
+                <input list="provincias" name="provincia" id="provincia">
                 <datalist id="provincias">
                     <option value="Rio Negro">Rio Negro</option>
                     <option value="Neuquén">Neuquén</option>
@@ -29,22 +29,24 @@
                     <option value="Tierra del Fuego">Tierra del Fuego</option>
                 </datalist>
             
-                <label for="codigo-postal"> Código Postal: </label><br>
+                <label for="codigo-postal"> Código Postal: </label>
                 <!--- Código postal: controlado con una expresión regular que incluya A1234ABC-->
-                <input type="text" id="codigo-postal" name="codigo-postal" placeholder="A1234ABC" pattern="[A-Z]{1}[0-9]{4}[A-Z]{3}"><br>
-
-                <h2>Elige el método que prefieras para comunicarnos: 
-                <p class="Suscripcion">
-                    <input type="radio" id="email" name="option" value="E-MAIL" checked>
-                    <label for="email">E-MAIL</label>
-                    <input type="radio" id="telefono" name="option" value="TELEFONO">
-                    <label for="telefono"> Teléfono</label>
-                    <input type="radio" id="correopostal" name="option" value="CorreoPostal" >
-                    <label for="CorreoPostal">Correo Postal </label><br>
+                <input type="text" id="codigo-postal" name="codigo-postal" placeholder="A1234ABC" pattern="[A-Z]{1}[0-9]{4}[A-Z]{3}">
+                <p>
+                 <h2>Elige el método que prefieras para comunicarnos: 
+                    <p>
+                     <input type="radio" id="email" name="option" value="E-MAIL" checked>
+                     <label for="email">E-MAIL</label>
+                     <input type="radio" id="telefono" name="option" value="TELEFONO">
+                     <label for="telefono"> Teléfono</label>
+                     <input type="radio" id="correopostal" name="option" value="CorreoPostal" >
+                     <label for="CorreoPostal">Correo Postal </label>
+                    </p>
+                 </h2>
                 </p>
-                </h2><br>
-                <h2>Tipo de suscripción:                     
-                        <p class="Suscripcion">
+           
+                 <h2>Tipo de suscripción:                     
+                        <p>
                             <input type="checkbox" id="tipo" name="alertas" value="Alertas" checked>
                             <label for="alertas">Alertas</label>
                             <input type="checkbox" id="promociones" name="promociones" value="Promociones">
@@ -54,7 +56,8 @@
                             <input type="checkbox" id="eventos" name="promociones" value="Eventos">
                             <label for="eventos">Eventos</label>
                         </p>
-                </h2><br>
+                 </h2>
+
                 <button type="button" onclick="alert('Su formulario fue enviado con éxito')" >Enviar</button>
             </p>
         </form>
@@ -63,15 +66,18 @@
     <table>
         <tr>
         <th>Formulario</th>
-        <th>A completar</th>
+        <th>A Completar</th>
         </tr>
         <tr>
         <td>Nombre</td>
         <td><input type="text" name="nombre" /></td>
         </tr>
         <tr>
-        <td>Email</td>
-        <td><input type="text" name="email" /></td>
+        <td>Apellido</td>
+        <td><input type="text" name="apellido" /></td>
+        </tr>
+        <td>Dirección</td>
+        <td><input type="text" name="direccion" /></td>
         </tr>
         <tr>
         <td>Teléfono</td>
@@ -82,8 +88,15 @@
         <td><input type="number" name="edad" /></td>
         </tr>
         <tr>
+        <td>Email</td>
+        <td><input type="text" name="email" /></td>
+        </tr>
+        <tr>
         <td>Provincia</td>
         <td><input type="text" name="provincias"/></td>
+        </tr>
+        <td>Código Postal</td>
+        <td><input type="text" name="codigo-postal" /></td>
         </tr>
     </table>
 </body>

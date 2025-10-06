@@ -6,7 +6,7 @@
 }
 
 header {
-    font-size: 42px;
+    font-size: 36px;
     text-align: left;
     margin-bottom: 20px;
     color: rgb(77, 4, 77);
@@ -16,7 +16,7 @@ header {
 }
 
 h1 {
-    font-size: 42px;
+    font-size: 36px;
     text-align: left;
     margin-bottom: 20px;
     color: rgb(77, 4, 77);
@@ -30,14 +30,14 @@ h1 {
     transition: transform 0.5s;
   }
   .hover-giro:hover {
-
+    
     transform: rotateY(360deg);
 }
 
 h2 {   
     font-weight: bold; 
     color: rgb(77, 4, 77);
-    font-size: 40px;
+    font-size: 38px;
     padding: 20px;
     background-color:rgba(176, 0, 164, 0.3);
     border: 4px solid rgba(104, 2, 172, 0.61);
@@ -88,7 +88,7 @@ button[type=button]{
     background-color: rgb(153, 0, 255);
   }
 
-input[type=text], select {
+input[type=text] {
 
     width: 100%;
     font-size: 32px;
@@ -96,20 +96,20 @@ input[type=text], select {
     margin: 8px 0;
     display: inline-block;
     border: 1px solid #ccc;
-    border-radius: 4px;
+    border-radius: 8px;
     box-sizing: border-box;
   }
-input[type=number], select {
-
+input[type=number] {
     width: 100%;
     font-size: 32px;
     padding: 12px 20px;
     margin: 8px 0;
     display: inline-block;
     border: 1px solid #ccc;
-    border-radius: 4px;
+    border-radius: 8px;
     box-sizing: border-box;
-  }
+}
+
 input[list=provincias] {
 
     width: 100%;
@@ -121,23 +121,24 @@ input[list=provincias] {
     border-radius: 8px;
     box-sizing: border-box;
   }
-
 button[type=button] {
     width: 100%;
     background-color: rgb(153, 0, 255);
-    color: white;
+    color: white !;
     padding: 14px 20px;
     margin: 8px 0;
     border: none;
     border-radius: 4px;
     cursor: pointer;
 }
-p.Suscripcion{
-  appearance: none;
-}
-table, th, td {    
+
+table, th, td {  
+    border-collapse: collapse;  
     border: 1px solid black;
-  }
+    font-size: 32px;
+    padding: 12px 20px;
+    margin: 8px 0;
+}
 .foto {
   width:500px;
   height:800px;
