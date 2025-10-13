@@ -18,15 +18,12 @@ header {
     
 }
 .sticky {
-    
     position: sticky;
     top: 0;
-    /*z-index: 100;*/
 
 }
 .inicio {
-    /*display: flex;*/
-    align-items: center;   
+     align-items: center;   
     justify-content: space-between; 
     padding: 20px;
 }
@@ -67,17 +64,17 @@ body {
     background-color: #f0f0f0;
 }
 
-nav{
+nav {
  
     background-position: right bottom, left top;
     padding: 15px;
     color: rgb(32, 32, 32);
     font-size: large;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-family: Verdana, Tahoma, sans-serif;
    
 }
 
-p{
+p {
     font-size: 36px;
     color: black;
     margin-bottom: 10px;
@@ -100,7 +97,8 @@ a {
     text-align:center;
 }
 
-button[type=button]{
+button[type=button] {
+    color: white;
     font-size: 40px;
     border-style: solid;
     border-color: #000000;
@@ -108,7 +106,6 @@ button[type=button]{
   }
 
 input[type=text] {
-
     width: 100%;
     font-size: 32px;
     padding: 12px 20px;
@@ -143,7 +140,6 @@ input[list=provincias] {
 button[type=button] {
     width: 100%;
     background-color: rgb(153, 0, 255);
-    color: white;
     padding: 14px 20px;
     margin: 8px 0;
     border: none;
@@ -162,14 +158,14 @@ table, th, td {
   width:500px;
   height:800px;
 }
-.pie {
-  border-radius: 50%;
-}  
+
 .dot {
+    text-decoration: none;
     height: 40px;
     width: 40px;
     border-radius: 50%;
     display: inline-block;    
     background-color: rgba(104, 2, 172, 0.61);
+
 }  
  
