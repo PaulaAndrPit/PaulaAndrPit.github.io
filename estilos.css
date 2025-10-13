@@ -2,18 +2,35 @@
     margin: 0;
     border: 0;
     padding: 0%;
-    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-family: 'Times New Roman', Times, serif;
 }
 
 header {
+    display: flex;
     font-size: 36px;
     text-align: left;
+    align-items: center; 
+    justify-content: space-between;
     margin-bottom: 20px;
     color: rgb(77, 4, 77);
     background-color:rgba(176, 0, 164, 0.3);
-    padding: 20px;
- 
+    padding: 40px;
+    
 }
+.sticky {
+    
+    position: sticky;
+    top: 0;
+    /*z-index: 100;*/
+
+}
+.inicio {
+    /*display: flex;*/
+    align-items: center;   
+    justify-content: space-between; 
+    padding: 20px;
+}
+
 
 h1 {
     font-size: 36px;
@@ -24,10 +41,12 @@ h1 {
 }
 
 .hover-giro {
-    
-    width: 200px;
+    display: block;
+    margin-left: auto;
+    width: 10%;
     border-radius: 50%;
     transition: transform 0.5s;
+
   }
   .hover-giro:hover {
     
@@ -73,12 +92,12 @@ footer {
 }
 
 span {
-  font-size:40px;
+  text-transform: right;
 }
 
 a {
     font-weight: bold; 
-    text-decoration: underline;
+    text-align:center;
 }
 
 button[type=button]{
@@ -143,9 +162,14 @@ table, th, td {
   width:500px;
   height:800px;
 }
-
 .pie {
   border-radius: 50%;
 }  
-  
+.dot {
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    display: inline-block;    
+    background-color: rgba(104, 2, 172, 0.61);
+}  
  
