@@ -1,27 +1,48 @@
 <!DOCTYPE html>
 <html lang="es">
-    <head>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="estilos.css">
     <title>Formulario de Contacto</title>
-    </head>
+</head>
 <body>
     <main id="inicio">
         <form>
-            <h1> COMPLETE EL FORMULARIO </h1>
+            <h1>COMPLETE EL FORMULARIO</h1>           
+            
             <p>
                 <label for="nombre">Nombre: </label>
-                <input type="text" id="nombre" name="nombre" maxlength="20">
+                <input type="text" id="nombre" name="nombre" maxlength="20" required>
+            </p>
+            
+            <p>
                 <label for="apellido">Apellido: </label>
                 <input type="text" id="apellido" name="apellido" maxlength="20">
+            </p>
+            
+            <p>
                 <label for="direccion">Dirección: </label>
-                <input type="text" id="direccion" name="direccion" >
-                <label for="text">E-mail: </label>
-                <input type="text" id="Email" name="Email">
-                <label type="Telefono">Teléfono: 
-                <input type="text" id="telefono" name="telefono" placeholder="02920-15123456" pattern ="[0-9]{5}-[0-9]{8}" onclick=this.value="" >
-                </label>      
+                <textarea id="direccion" name="direccion" rows="3" cols="30"></textarea>
+            </p>
+
+            <p>
+                <label for="email">E-mail: </label>
+                <input type="email" id="email" name="email">
+            </p>
+            
+
+            <p>
+                <label for="telefono">Teléfono: </label>
+                <input type="tel" id="telefono" name="telefono" placeholder="02920-15123456" onclick= this.value="" pattern="[0-9]{5}-[0-9]{8}">
+            </p>
+            
+            <p>
                 <label for="edad">Edad: </label>
                 <input type="number" id="edad" name="edad" min="16" max="120">
+            </p>
+            
+            <p>
                 <label for="provincia">Provincia: </label>
                 <input list="provincias" name="provincia" id="provincia">
                 <datalist id="provincias">
@@ -31,84 +52,102 @@
                     <option value="Santa Cruz">Santa Cruz</option>
                     <option value="Tierra del Fuego">Tierra del Fuego</option>
                 </datalist>
+            </p>
             
-                <label for="codigo-postal"> Código Postal: </label>
-                <!--- Código postal: controlado con una expresión regular que incluya A1234ABC-->
+            <p>
+                <label for="codigo-postal">Código Postal: </label>
                 <input type="text" id="codigo-postal" name="codigo-postal" placeholder="A1234ABC" pattern="[A-Z]{1}[0-9]{4}[A-Z]{3}">
-                <p>
-                 <h2>Elige el método que prefieras para comunicarnos: 
-                    <p>
-                     <input type="radio" id="email" name="option" value="E-MAIL" checked>
-                     <label for="email">E-MAIL</label>
-                     <input type="radio" id="telefono" name="option" value="TELEFONO">
-                     <label for="telefono"> Teléfono</label>
-                     <input type="radio" id="correopostal" name="option" value="CorreoPostal" >
-                     <label for="CorreoPostal">Correo Postal </label>
-                    </p>
-                 </h2>
-                </p>
-           
-                 <h2>Tipo de suscripción:                     
-                        <p>
-                            <input type="checkbox" id="tipo" name="alertas" value="Alertas" checked>
-                            <label for="alertas">Alertas</label>
-                            <input type="checkbox" id="promociones" name="promociones" value="Promociones">
-                            <label for="promociones">Promociones</label>
-                            <input type="checkbox" id="noticias" name="noticias" value="Noticias">
-                            <label for="noticias">Noticias</label>
-                            <input type="checkbox" id="eventos" name="promociones" value="Eventos">
-                            <label for="eventos">Eventos</label>
-                        </p>
-                 </h2>
+            </p>
+            
 
-                <button type="button" onclick="alert('Su formulario fue enviado con éxito')" >Enviar</button>
+            <fieldset>
+                <legend>Elige el método que prefieras para comunicarnos:</legend>
+                <p>
+                    <input type="radio" id="radio-email" name="metodo-contacto" value="E-MAIL" checked>
+                    <label for="radio-email">E-MAIL</label>
+                    
+                    <input type="radio" id="radio-telefono" name="metodo-contacto" value="TELEFONO">
+                    <label for="radio-telefono">Teléfono</label>
+                    
+                    <input type="radio" id="radio-correo" name="metodo-contacto" value="CorreoPostal">
+                    <label for="radio-correo">Correo Postal</label>
+                </p>
+            </fieldset>
+ 
+            <fieldset>
+                <legend>Tipo de suscripción:</legend>
+                <p>
+                    <input type="checkbox" id="alertas" name="suscripcion" value="Alertas" checked>
+                    <label for="alertas">Alertas</label>
+                    
+                    <input type="checkbox" id="promociones" name="suscripcion" value="Promociones">
+                    <label for="promociones">Promociones</label>
+                    
+                    <input type="checkbox" id="noticias" name="suscripcion" value="Noticias">
+                    <label for="noticias">Noticias</label>
+                    
+                    <input type="checkbox" id="eventos" name="suscripcion" value="Eventos">
+                    <label for="eventos">Eventos</label>
+                </p>
+            </fieldset>
+            
+            <p>
+                <button type="button" onclick="alert('Su formulario fue enviado con éxito')">Enviar</button>
             </p>
         </form>
     </main>
     
+    <h2>Resumen del Formulario</h2>
     <table>
-        <tr>
-        <th>Formulario</th>
-        <th>A Completar</th>
-        </tr>
-        <tr>
-        <td>Nombre</td>
-        <td><input type="text" name="nombre" /></td>
-        </tr>
-        <tr>
-        <td>Apellido</td>
-        <td><input type="text" name="apellido" /></td>
-        </tr>
-        <td>Dirección</td>
-        <td><input type="text" name="direccion" /></td>
-        </tr>
-        <tr>
-        <td>Teléfono</td>
-        <td><input type="text" name="telefono" /></td>
-        </tr>
-        <tr>
-        <td>Edad</td>
-        <td><input type="number" name="edad" /></td>
-        </tr>
-        <tr>
-        <td>Email</td>
-        <td><input type="text" name="email" /></td>
-        </tr>
-        <tr>
-        <td>Provincia</td>
-        <td><input type="text" name="provincias"/></td>
-        </tr>
-        <td>Código Postal</td>
-        <td><input type="text" name="codigo-postal" /></td>
-        </tr>
+        <thead>
+            <tr>
+                <th>Campo</th>
+                <th>A Completar</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Nombre</td>
+                <td><input type="text" name="tabla-nombre"></td>
+            </tr>
+            <tr>
+                <td>Apellido</td>
+                <td><input type="text" name="tabla-apellido"></td>
+            </tr>
+            <tr>
+                <td>Dirección</td>
+                <td><input type="text" name="tabla-direccion"></td>
+            </tr>
+            <tr>
+                <td>Teléfono</td>
+                <td><input type="text" name="tabla-telefono"></td>
+            </tr>
+            <tr>
+                <td>Edad</td>
+                <td><input type="number" name="tabla-edad"></td>
+            </tr>
+            <tr>
+                <td>Email</td>
+                <td><input type="email" name="tabla-email"></td>
+            </tr>
+            <tr>
+                <td>Provincia</td>
+                <td><input type="text" name="tabla-provincia"></td>
+            </tr>
+            <tr>
+                <td>Código Postal</td>
+                <td><input type="text" name="tabla-codigo-postal"></td>
+            </tr>
+        </tbody>
     </table>
+    
+    <footer>
+        <p>
+            <a href="#inicio" class="dot">&#8679;</a>
+        </p>
+        <p>
+            <a href="index.html">&#8656; Volver a página principal</a>
+        </p>
+    </footer>
 </body>
-<footer>
-    <p>
-        <a href="#inicio" class="dot" > &#8679;</a></p>
-    <p> <a href="index.html">&#8656; Volver a página principal</a> </p>
-</footer>
-
-
 </html>
-
