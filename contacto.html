@@ -8,40 +8,32 @@
 </head>
 <body>
     <main id="inicio">
+        <h2>COMPLETE EL FORMULARIO</h2>
         <form>
-            <h1>COMPLETE EL FORMULARIO</h1>           
-            
             <p>
                 <label for="nombre">Nombre: </label>
                 <input type="text" id="nombre" name="nombre" maxlength="20" required>
             </p>
-            
             <p>
                 <label for="apellido">Apellido: </label>
                 <input type="text" id="apellido" name="apellido" maxlength="20">
             </p>
-            
             <p>
                 <label for="direccion">Dirección: </label>
                 <textarea id="direccion" name="direccion" rows="3" cols="30"></textarea>
             </p>
-
             <p>
                 <label for="email">E-mail: </label>
                 <input type="email" id="email" name="email">
             </p>
-            
-
             <p>
                 <label for="telefono">Teléfono: </label>
                 <input type="tel" id="telefono" name="telefono" placeholder="02920-15123456" onclick= this.value="" pattern="[0-9]{5}-[0-9]{8}">
             </p>
-            
             <p>
                 <label for="edad">Edad: </label>
                 <input type="number" id="edad" name="edad" min="16" max="120">
             </p>
-            
             <p>
                 <label for="provincia">Provincia: </label>
                 <input list="provincias" name="provincia" id="provincia">
@@ -53,15 +45,12 @@
                     <option value="Tierra del Fuego">Tierra del Fuego</option>
                 </datalist>
             </p>
-            
             <p>
                 <label for="codigo-postal">Código Postal: </label>
                 <input type="text" id="codigo-postal" name="codigo-postal" placeholder="A1234ABC" pattern="[A-Z]{1}[0-9]{4}[A-Z]{3}">
             </p>
-            
-
             <fieldset>
-                <legend>Elige el método que prefieras para comunicarnos:</legend>
+                <legend>Método preferido de contacto:</legend>
                 <p>
                     <input type="radio" id="radio-email" name="metodo-contacto" value="E-MAIL" checked>
                     <label for="radio-email">E-MAIL</label>
@@ -73,7 +62,6 @@
                     <label for="radio-correo">Correo Postal</label>
                 </p>
             </fieldset>
- 
             <fieldset>
                 <legend>Tipo de suscripción:</legend>
                 <p>
@@ -90,13 +78,11 @@
                     <label for="eventos">Eventos</label>
                 </p>
             </fieldset>
-            
             <p>
                 <button type="button" onclick="alert('Su formulario fue enviado con éxito')">Enviar</button>
             </p>
         </form>
     </main>
-    
     <h2>Resumen del Formulario</h2>
     <table>
         <thead>
@@ -140,7 +126,6 @@
             </tr>
         </tbody>
     </table>
-    
     <footer>
         <p>
             <a href="#inicio" class="dot">&#8679;</a>
