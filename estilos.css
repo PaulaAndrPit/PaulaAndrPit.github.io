@@ -65,22 +65,20 @@ header h1 p {
 }
 
 /* ========== IMAGEN CON EFECTO (LOGO A LA DERECHA) ========== */
-.hover-giro {
-    width: 150px;
-    height: 150px;
-    border-radius: 50%;
-    transition: transform 0.5s ease;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    flex-shrink: 0;
+
+.img-header {   
+        max-width: 10%;
+        border-radius: 50%;
+        transition: transform 0.5s ease;
+        height: auto;
+        animation: horizontal-spin 4s linear;
+}
+@keyframes horizontal-spin {
+            0% { transform: rotateY(0deg); }
+            100% { transform: rotateY(360deg); }
 }
 
 /* ========== SECCIÓN INTRO ========== */
-.intro {
-    max-width: 1200px;
-    margin: 30px auto;
-    padding: 0 40px;
-}
-
 .intro p {
     font-size: 1.2rem;
     color: rgb(50, 50, 50);
@@ -102,9 +100,7 @@ h2 {
     text-align: center;
 }
 
-.hover-giro:hover {
-    transform: rotateY(360deg);
-}
+
 
 /* ========== NAVEGACIÓN ========== */
 nav {
@@ -209,7 +205,9 @@ main a:hover {
     border-radius: 10px;
     background-color: rgba(255, 255, 255, 0.5);
 }
-
+#cvCompleto {
+    display: none;
+}
 /* Estilos para la barra de desplazamiento */
 .texto-presentacion::-webkit-scrollbar {
     width: 10px;
@@ -339,7 +337,7 @@ input[type="checkbox"] + label {
 }
 
 /* ========== BOTÓN ========== */
-button[type="button"] {
+button[type="button"], .btn-leer-mas {
     width: 100%;
     background: linear-gradient(135deg, rgb(153, 0, 255) 0%, rgb(120, 0, 200) 100%);
     color: white;
