@@ -1,16 +1,17 @@
 @font-face {
-  font-family: 'Santamilk';
-  font-size: 32px;
-  src: url('Santamilk.woff') format('woff');
-  font-weight: normal;
-  font-style: normal;
+    font-family: 'Santamilk';
+    font-size: 32px;
+    src: url('Santamilk.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
 }
+
 @font-face {
-  font-family: 'Starlamp';
-  font-size: 32px;
-  src: url('Starlamp.woff') format('woff');
-  font-weight: normal;
-  font-style: normal;
+    font-family: 'Starlamp';
+    font-size: 32px;
+    src: url('Starlamp.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
 }
 
 * {
@@ -66,16 +67,22 @@ header h1 p {
 
 /* ========== IMAGEN CON EFECTO (LOGO A LA DERECHA) ========== */
 
-.img-header {   
-        max-width: 10%;
-        border-radius: 50%;
-        transition: transform 0.5s ease;
-        height: auto;
-        animation: horizontal-spin 4s linear;
+.img-header {
+    max-width: 10%;
+    border-radius: 50%;
+    transition: transform 0.5s ease;
+    height: auto;
+    animation: horizontal-spin 4s linear;
 }
+
 @keyframes horizontal-spin {
-            0% { transform: rotateY(0deg); }
-            100% { transform: rotateY(360deg); }
+    0% {
+        transform: rotateY(0deg);
+    }
+
+    100% {
+        transform: rotateY(360deg);
+    }
 }
 
 /* ========== SECCIÓN INTRO ========== */
@@ -205,9 +212,11 @@ main a:hover {
     border-radius: 10px;
     background-color: rgba(255, 255, 255, 0.5);
 }
+
 #cvCompleto {
     display: none;
 }
+
 /* Estilos para la barra de desplazamiento */
 .texto-presentacion::-webkit-scrollbar {
     width: 10px;
@@ -327,8 +336,8 @@ input[type="checkbox"] {
     accent-color: rgb(153, 0, 255);
 }
 
-input[type="radio"] + label,
-input[type="checkbox"] + label {
+input[type="radio"]+label,
+input[type="checkbox"]+label {
     display: inline;
     font-size: 1.1rem;
     margin-right: 20px;
@@ -337,7 +346,8 @@ input[type="checkbox"] + label {
 }
 
 /* ========== BOTÓN ========== */
-button[type="button"], .btn-leer-mas {
+button[type="button"],
+.btn-leer-mas {
     width: 100%;
     background: linear-gradient(135deg, rgb(153, 0, 255) 0%, rgb(120, 0, 200) 100%);
     color: white;
@@ -385,7 +395,8 @@ thead {
     color: white;
 }
 
-th, td {
+th,
+td {
     border: 1px solid #ddd;
     font-size: 1.1rem;
     padding: 15px;
@@ -413,6 +424,578 @@ table input {
     padding: 8px;
     border: 1px solid #ddd;
     border-radius: 4px;
+}
+
+/* ========== ESTILOS PARA CAMPOS INVÁLIDOS ========== */
+.campo-invalido {
+    border-color: #dc3545 !important;
+    box-shadow: 0 0 8px rgba(220, 53, 69, 0.5) !important;
+    background-color: #fff5f5 !important;
+}
+
+/* ========== MENÚ DE JUEGOS ========== */
+.menu-juegos {
+    max-width: 100%;
+    width: 100%;
+}
+
+.intro-juegos {
+    text-align: center;
+    font-size: 1.6rem;
+    color: rgb(77, 4, 77);
+    margin-bottom: 40px;
+    font-weight: bold;
+}
+
+.grid-juegos {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 40px;
+    margin: 40px 0;
+}
+
+.tarjeta-juego {
+    background: linear-gradient(135deg, rgba(255, 192, 203, 0.3) 0%, rgba(255, 105, 180, 0.2) 100%);
+    border: 3px solid rgba(255, 105, 180, 0.4);
+    border-radius: 20px;
+    padding: 50px 40px;
+    text-align: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 12px rgba(255, 105, 180, 0.2);
+}
+
+.tarjeta-juego:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 20px rgba(255, 105, 180, 0.4);
+    background: linear-gradient(135deg, rgba(255, 192, 203, 0.5) 0%, rgba(255, 105, 180, 0.3) 100%);
+    border-color: rgba(255, 0, 127, 0.6);
+}
+
+.icono-juego {
+    font-size: 5rem;
+    margin-bottom: 20px;
+}
+
+.tarjeta-juego h3 {
+    font-family: 'Starlamp', serif;
+    color: rgb(77, 4, 77);
+    font-size: 2rem;
+    margin-bottom: 15px;
+}
+
+.tarjeta-juego p {
+    color: rgb(120, 0, 200);
+    font-size: 1.3rem;
+    line-height: 1.6;
+}
+
+/* ========== CONTENEDORES DE JUEGOS ========== */
+.juego-container {
+    animation: fadeIn 0.5s ease;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.titulo-juego {
+    font-family: 'Starlamp', serif;
+    color: rgb(77, 4, 77);
+    font-size: 2.5rem;
+    text-align: center;
+    margin: 20px 0;
+    padding: 15px;
+    background: linear-gradient(135deg, rgba(255, 192, 203, 0.3) 0%, rgba(176, 0, 164, 0.3) 100%);
+    border: 2px solid rgba(255, 105, 180, 0.4);
+    border-radius: 10px;
+}
+
+.btn-volver {
+    background: linear-gradient(135deg, rgb(255, 105, 180) 0%, rgb(255, 0, 127) 100%);
+    color: white;
+    border: none;
+    padding: 12px 24px;
+    border-radius: 10px;
+    font-size: 1.1rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 8px rgba(255, 105, 180, 0.3);
+}
+
+.btn-volver:hover {
+    background: linear-gradient(135deg, rgb(255, 0, 127) 0%, rgb(199, 21, 133) 100%);
+    transform: translateX(-5px);
+    box-shadow: 0 6px 12px rgba(255, 105, 180, 0.5);
+}
+
+.container-juego {
+    background: white;
+    border-radius: 20px;
+    padding: 40px;
+    box-shadow: 0 20px 60px rgba(255, 105, 180, 0.2);
+    max-width: 700px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+/* ========== PIEDRA PAPEL TIJERA ========== */
+.marcador {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 30px;
+    padding: 20px;
+    background: linear-gradient(135deg, rgba(255, 192, 203, 0.2) 0%, rgba(176, 0, 164, 0.1) 100%);
+    border-radius: 10px;
+    border: 2px solid rgba(255, 105, 180, 0.3);
+}
+
+.puntos {
+    text-align: center;
+}
+
+.puntos h3 {
+    color: rgb(77, 4, 77);
+    margin-bottom: 10px;
+    font-size: 1em;
+    font-weight: bold;
+}
+
+.puntos p {
+    font-size: 2.5em;
+    font-weight: bold;
+    color: rgb(255, 0, 127);
+}
+
+.opciones {
+    display: flex;
+    justify-content: space-around;
+    margin: 30px 0;
+    gap: 15px;
+}
+
+.opcion {
+    background: linear-gradient(135deg, rgb(153, 0, 255) 0%, rgb(120, 0, 200) 100%);
+    border: none;
+    border-radius: 15px;
+    padding: 25px;
+    font-size: 3em;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 4px 8px rgba(153, 0, 255, 0.3);
+}
+
+.opcion:hover {
+    background: linear-gradient(135deg, rgb(255, 105, 180) 0%, rgb(255, 0, 127) 100%);
+    transform: scale(1.1);
+    box-shadow: 0 6px 12px rgba(255, 105, 180, 0.5);
+}
+
+.opcion:active {
+    transform: scale(0.95);
+}
+
+.resultado {
+    text-align: center;
+    margin: 30px 0;
+    min-height: 150px;
+}
+
+.elecciones {
+    display: flex;
+    justify-content: space-around;
+    margin: 20px 0;
+    font-size: 1.2em;
+}
+
+.eleccion {
+    text-align: center;
+}
+
+.eleccion-icon {
+    font-size: 3em;
+    margin: 10px 0;
+}
+
+.mensaje {
+    font-size: 1.8em;
+    font-weight: bold;
+    margin: 20px 0;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.ganaste {
+    color: #28a745;
+    background: #d4edda;
+}
+
+.perdiste {
+    color: #dc3545;
+    background: #f8d7da;
+}
+
+.empate {
+    color: #ffc107;
+    background: #fff3cd;
+}
+
+.reiniciar {
+    display: block;
+    margin: 20px auto;
+    padding: 15px 40px;
+    background: linear-gradient(135deg, rgb(255, 105, 180) 0%, rgb(255, 0, 127) 100%);
+    color: white;
+    border: none;
+    border-radius: 10px;
+    font-size: 1.1em;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 8px rgba(255, 105, 180, 0.3);
+}
+
+.reiniciar:hover {
+    background: linear-gradient(135deg, rgb(255, 0, 127) 0%, rgb(199, 21, 133) 100%);
+    transform: scale(1.05);
+    box-shadow: 0 6px 12px rgba(255, 105, 180, 0.5);
+}
+
+/* ========== ADIVINA EL NÚMERO ========== */
+.instrucciones {
+    text-align: center;
+    font-size: 1.2rem;
+    color: rgb(77, 4, 77);
+    margin-bottom: 30px;
+    padding: 15px;
+    background: linear-gradient(135deg, rgba(255, 192, 203, 0.2) 0%, rgba(176, 0, 164, 0.1) 100%);
+    border-radius: 10px;
+}
+
+.stats-numero,
+.stats-memoria,
+.stats-banderas {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 30px;
+    padding: 20px;
+    background: linear-gradient(135deg, rgba(255, 192, 203, 0.2) 0%, rgba(176, 0, 164, 0.1) 100%);
+    border-radius: 10px;
+    border: 2px solid rgba(255, 105, 180, 0.3);
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.stat {
+    text-align: center;
+}
+
+.stat-label {
+    display: block;
+    color: rgb(77, 4, 77);
+    font-weight: bold;
+    font-size: 0.9rem;
+    margin-bottom: 5px;
+}
+
+.stat-value {
+    display: block;
+    color: rgb(255, 0, 127);
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+.input-numero {
+    display: flex;
+    gap: 15px;
+    margin: 30px 0;
+}
+
+.input-numero input {
+    flex: 1;
+    font-size: 1.3rem;
+    padding: 15px;
+    border: 2px solid rgba(255, 105, 180, 0.4);
+    border-radius: 10px;
+    text-align: center;
+    transition: all 0.3s ease;
+}
+
+.input-numero input:focus {
+    outline: none;
+    border-color: rgb(255, 0, 127);
+    box-shadow: 0 0 10px rgba(255, 105, 180, 0.3);
+}
+
+.btn-adivinar {
+    background: linear-gradient(135deg, rgb(153, 0, 255) 0%, rgb(120, 0, 200) 100%);
+    color: white;
+    border: none;
+    padding: 15px 30px;
+    border-radius: 10px;
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 8px rgba(153, 0, 255, 0.3);
+}
+
+.btn-adivinar:hover {
+    background: linear-gradient(135deg, rgb(255, 105, 180) 0%, rgb(255, 0, 127) 100%);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 12px rgba(255, 105, 180, 0.5);
+}
+
+.pista {
+    text-align: center;
+    font-size: 1.5rem;
+    font-weight: bold;
+    padding: 20px;
+    margin: 20px 0;
+    border-radius: 10px;
+    min-height: 60px;
+}
+
+.pista.frio {
+    background: linear-gradient(135deg, #e3f2fd 0%, #bbdefb 100%);
+    color: #1976d2;
+}
+
+.pista.tibio {
+    background: linear-gradient(135deg, #fff9c4 0%, #fff59d 100%);
+    color: #f57f17;
+}
+
+.pista.caliente {
+    background: linear-gradient(135deg, #ffccbc 0%, #ff8a65 100%);
+    color: #d84315;
+}
+
+.pista.correcto {
+    background: linear-gradient(135deg, #c8e6c9 0%, #81c784 100%);
+    color: #2e7d32;
+}
+
+/* ========== JUEGO DE MEMORIA ========== */
+.tablero-memoria {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 15px;
+    margin: 30px 0;
+    max-width: 500px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.carta {
+    aspect-ratio: 1;
+    background: linear-gradient(135deg, rgb(255, 192, 203) 0%, rgb(255, 105, 180) 100%);
+    border: 3px solid rgba(255, 0, 127, 0.4);
+    border-radius: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2.5rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 8px rgba(255, 105, 180, 0.3);
+}
+
+.carta:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 12px rgba(255, 105, 180, 0.5);
+}
+
+.carta.volteada {
+    background: white;
+    border-color: rgb(153, 0, 255);
+}
+
+.carta.encontrada {
+    background: linear-gradient(135deg, #c8e6c9 0%, #81c784 100%);
+    border-color: #2e7d32;
+    cursor: default;
+    animation: encontrada 0.5s ease;
+}
+
+@keyframes encontrada {
+
+    0%,
+    100% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.2) rotate(5deg);
+    }
+}
+
+.carta .contenido {
+    display: none;
+}
+
+.carta.volteada .contenido,
+.carta.encontrada .contenido {
+    display: block;
+}
+
+/* ========== JUEGO DE BANDERAS ========== */
+.contenedor-bandera {
+    text-align: center;
+    margin: 30px 0;
+    padding: 30px;
+    background: linear-gradient(135deg, rgba(255, 192, 203, 0.2) 0%, rgba(176, 0, 164, 0.1) 100%);
+    border-radius: 15px;
+    border: 3px solid rgba(255, 105, 180, 0.3);
+}
+
+.bandera-display {
+    font-size: 10rem;
+    margin: 20px 0;
+    text-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.opciones-banderas {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 15px;
+    margin: 30px 0;
+}
+
+.opcion-bandera {
+    background: linear-gradient(135deg, rgba(153, 0, 255, 0.1) 0%, rgba(120, 0, 200, 0.1) 100%);
+    border: 2px solid rgba(153, 0, 255, 0.4);
+    border-radius: 10px;
+    padding: 20px;
+    font-size: 1.2rem;
+    color: rgb(77, 4, 77);
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-align: center;
+    font-weight: bold;
+}
+
+.opcion-bandera:hover {
+    background: linear-gradient(135deg, rgba(255, 105, 180, 0.2) 0%, rgba(255, 0, 127, 0.2) 100%);
+    border-color: rgb(255, 0, 127);
+    transform: translateX(10px);
+}
+
+.opcion-bandera.correcta {
+    background: linear-gradient(135deg, #c8e6c9 0%, #81c784 100%);
+    border-color: #2e7d32;
+    animation: correcta 0.5s ease;
+}
+
+.opcion-bandera.incorrecta {
+    background: linear-gradient(135deg, #ffcdd2 0%, #ef9a9a 100%);
+    border-color: #c62828;
+    animation: shake 0.5s ease;
+}
+
+@keyframes correcta {
+
+    0%,
+    100% {
+        transform: translateX(0);
+    }
+
+    25% {
+        transform: translateX(10px);
+    }
+
+    75% {
+        transform: translateX(-10px);
+    }
+}
+
+@keyframes shake {
+
+    0%,
+    100% {
+        transform: translateX(0);
+    }
+
+    25% {
+        transform: translateX(-10px);
+    }
+
+    75% {
+        transform: translateX(10px);
+    }
+}
+
+.resultado-bandera {
+    text-align: center;
+    font-size: 1.3rem;
+    font-weight: bold;
+    padding: 15px;
+    margin: 20px 0;
+    border-radius: 10px;
+    min-height: 50px;
+}
+
+/* ========== RESPONSIVE ========== */
+@media screen and (max-width: 768px) {
+    .grid-juegos {
+        grid-template-columns: 1fr;
+        gap: 25px;
+    }
+
+    .tarjeta-juego {
+        padding: 40px 30px;
+    }
+
+    .icono-juego {
+        font-size: 4rem;
+    }
+
+    .tarjeta-juego h3 {
+        font-size: 1.7rem;
+    }
+
+    .tarjeta-juego p {
+        font-size: 1.1rem;
+    }
+
+    .intro-juegos {
+        font-size: 1.3rem;
+    }
+
+    .container-juego {
+        padding: 20px;
+    }
+
+    .tablero-memoria {
+        gap: 10px;
+    }
+
+    .carta {
+        font-size: 2rem;
+    }
+
+    .bandera-display {
+        font-size: 6rem;
+    }
+
+    .opciones {
+        flex-direction: column;
+    }
+
+    .opcion {
+        padding: 20px;
+    }
 }
 
 /* ========== FOOTER ========== */
@@ -477,90 +1060,91 @@ footer a:hover {
     body {
         padding: 0;
     }
-    
+
     header {
         flex-direction: column;
         text-align: center;
         gap: 20px;
         padding: 20px;
     }
-    
+
     header h1 {
         font-size: 1.8rem;
         text-align: center;
     }
-    
+
     header h1 p {
         font-size: 1.2rem;
     }
-    
+
     .hover-giro {
         width: 100px;
         height: 100px;
     }
-    
+
     .intro {
         padding: 0 20px;
     }
-    
+
     .intro p {
         font-size: 1rem;
     }
-    
+
     main {
         padding: 20px;
         margin: 20px 10px;
     }
-    
+
     main p {
         font-size: 1rem;
     }
-    
+
     h2 {
         font-size: 1.5rem;
         padding: 15px;
     }
-    
+
     nav {
         padding: 15px 20px;
         margin: 20px 10px;
     }
-    
+
     nav p {
         font-size: 1rem;
     }
-    
+
     /* Presentación responsive */
     .presentacion {
         flex-direction: column;
         align-items: center;
     }
-    
+
     .foto-perfil {
         width: 300px;
         height: 300px;
     }
-    
+
     .texto-presentacion {
         height: auto;
         overflow-y: visible;
     }
-    
+
     .texto-presentacion p {
         font-size: 1rem;
     }
-    
-    input[type="radio"] + label,
-    input[type="checkbox"] + label {
+
+    input[type="radio"]+label,
+    input[type="checkbox"]+label {
         display: block;
         margin: 10px 0;
     }
-    
+
     table {
         font-size: 0.9rem;
     }
-    
-    th, td {
+
+    th,
+    td {
         padding: 10px;
     }
 }

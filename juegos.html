@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="estilos.css">
+    <title>Juegos Interactivos</title>
+</head>
+<body>
+    <main id="inicio">
+        <h2>JUEGOS INTERACTIVOS</h2>
+        
+        <!-- MENÚ DE SELECCIÓN DE JUEGOS -->
+        <div id="menu-juegos" class="menu-juegos">
+            <p class="intro-juegos">Selecciona un juego para comenzar a jugar:</p>
+            <div class="grid-juegos">
+                <div class="tarjeta-juego" onclick="mostrarJuego('piedra-papel-tijera')">
+                    <div class="icono-juego">🪨📄✂️</div>
+                    <h3>Piedra, Papel o Tijera</h3>
+                    <p>Juega contra la computadora en este clásico juego</p>
+                </div>
+                
+                <div class="tarjeta-juego" onclick="mostrarJuego('adivina-numero')">
+                    <div class="icono-juego">🎲</div>
+                    <h3>Adivina el Número</h3>
+                    <p>¿Puedes adivinar el número secreto?</p>
+                </div>
+                
+                <div class="tarjeta-juego" onclick="mostrarJuego('memoria')">
+                    <div class="icono-juego">🃏</div>
+                    <h3>Juego de Memoria</h3>
+                    <p>Encuentra todas las parejas de cartas</p>
+                </div>
+                
+                <div class="tarjeta-juego" onclick="mostrarJuego('banderas')">
+                    <div class="icono-juego">🏁</div>
+                    <h3>Adivina la Bandera</h3>
+                    <p>Demuestra tus conocimientos sobre banderas del mundo</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- JUEGO 1: PIEDRA, PAPEL O TIJERA -->
+        <div id="piedra-papel-tijera" class="juego-container" style="display: none;">
+            <button class="btn-volver" onclick="volverMenu()">← Volver al Menú</button>
+            <h3 class="titulo-juego">Piedra, Papel o Tijera</h3>
+            
+            <div class="container-juego">
+                <div class="marcador">
+                    <div class="puntos">
+                        <h3>Jugador</h3>
+                        <p id="puntosJugador">0</p>
+                    </div>
+                    <div class="puntos">
+                        <h3>Computadora</h3>
+                        <p id="puntosComputadora">0</p>
+                    </div>
+                </div>
+
+                <div class="opciones">
+                    <button class="opcion" onclick="jugar('piedra')">🪨</button>
+                    <button class="opcion" onclick="jugar('papel')">📄</button>
+                    <button class="opcion" onclick="jugar('tijera')">✂️</button>
+                </div>
+
+                <div class="resultado" id="resultado">
+                    <p style="color: #666; font-size: 1.2em;">Elige tu jugada</p>
+                </div>
+
+                <button class="reiniciar" onclick="reiniciarPPT()">Reiniciar Juego</button>
+            </div>
+        </div>
+
+        <!-- JUEGO 2: ADIVINA EL NÚMERO -->
+        <div id="adivina-numero" class="juego-container" style="display: none;">
+            <button class="btn-volver" onclick="volverMenu()">← Volver al Menú</button>
+            <h3 class="titulo-juego">Adivina el Número</h3>
+            
+            <div class="container-juego">
+                <p class="instrucciones">Estoy pensando en un número entre 1 y 100. ¿Puedes adivinarlo?</p>
+                
+                <div class="stats-numero">
+                    <div class="stat">
+                        <span class="stat-label">Intentos:</span>
+                        <span class="stat-value" id="intentos">0</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-label">Mejor puntaje:</span>
+                        <span class="stat-value" id="mejorPuntaje">-</span>
+                    </div>
+                </div>
+
+                <div class="input-numero">
+                    <input type="number" id="inputNumero" min="1" max="100" placeholder="Ingresa un número">
+                    <button class="btn-adivinar" onclick="adivinarNumero()">Adivinar</button>
+                </div>
+
+                <div id="pistaNumero" class="pista"></div>
+                
+                <button class="reiniciar" onclick="reiniciarNumero()">Nuevo Juego</button>
+            </div>
+        </div>
+
+        <!-- JUEGO 3: MEMORIA -->
+        <div id="memoria" class="juego-container" style="display: none;">
+            <button class="btn-volver" onclick="volverMenu()">← Volver al Menú</button>
+            <h3 class="titulo-juego">Juego de Memoria</h3>
+            
+            <div class="container-juego">
+                <div class="stats-memoria">
+                    <div class="stat">
+                        <span class="stat-label">Movimientos:</span>
+                        <span class="stat-value" id="movimientos">0</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-label">Parejas:</span>
+                        <span class="stat-value" id="parejas">0/8</span>
+                    </div>
+                </div>
+
+                <div id="tableroMemoria" class="tablero-memoria"></div>
+                
+                <button class="reiniciar" onclick="reiniciarMemoria()">Nuevo Juego</button>
+            </div>
+        </div>
+
+        <!-- JUEGO 4: BANDERAS -->
+        <div id="banderas" class="juego-container" style="display: none;">
+            <button class="btn-volver" onclick="volverMenu()">← Volver al Menú</button>
+            <h3 class="titulo-juego">Adivina la Bandera</h3>
+            
+            <div class="container-juego">
+                <div class="stats-banderas">
+                    <div class="stat">
+                        <span class="stat-label">Correctas:</span>
+                        <span class="stat-value" id="correctas">0</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-label">Incorrectas:</span>
+                        <span class="stat-value" id="incorrectas">0</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-label">Pregunta:</span>
+                        <span class="stat-value" id="numeroPregunta">1</span>
+                    </div>
+                </div>
+
+                <div id="contenedorBandera" class="contenedor-bandera"></div>
+                
+                <div id="opcionesBanderas" class="opciones-banderas"></div>
+                
+                <div id="resultadoBandera" class="resultado-bandera"></div>
+                
+                <button class="reiniciar" onclick="reiniciarBanderas()">Nueva Ronda</button>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <p>
+            <a href="#inicio" class="dot">&#8679;</a>
+        </p>
+        <p>
+            <a href="contacto.html">&#8656; Volver a contacto</a>
+        </p>
+        <p>
+            <a href="index.html">&#8656; Volver a página principal</a>
+        </p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
