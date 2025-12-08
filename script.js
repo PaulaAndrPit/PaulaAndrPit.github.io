@@ -705,4 +705,4 @@ document.addEventListener('DOMContentLoaded', function () {
         iniciarJuegoBanderas();
     };
 
-});
+}); 
